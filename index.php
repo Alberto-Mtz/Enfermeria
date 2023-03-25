@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+    <title>INICIO ADMINISTRADOR</title>
+    <script>
+        if(!document.cookie){
+            window.location.replace("login.php");
+        }
+        
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #669934;">
+        <div class="container-fluid">
+            <div class="navbar-brand" href="#">
+                <img src="images/logo.svg" alt="Bootstrap" width="60" height="60">
+                <b style="font-family:Arial, Helvetica, sans-serif; font-size:25px; margin-left: 10px;">Control escolar</b>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="card mt-3">
+                    <a href="materias/tablaMaterias.php" class="link">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Materias</h5>
+                            <img src="images/book-stack.png" class="opcion" alt="">
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mt-3">
+                    <a class="link" href="alumnos/tablaAlumnos.php">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Alumnos</h5>
+                            <img src="images/students.png" class="opcion" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mt-3">
+                    <a href="rolusuario/usuarios.php" class="link">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Usuarios</h5>
+                            <img src="images/users.png" class="opcion" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mt-3">
+                    <a href="profesores/tablaProfesores.php" class="link">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Profesores</h5>
+                            <img src="images/profesor.png" class="opcion" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mt-3">
+                    <a href="horario.php" class="link">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Horarios</h5>
+                            <img src="images/calendario.png" class="opcion" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>
