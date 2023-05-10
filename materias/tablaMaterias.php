@@ -70,12 +70,6 @@
             
             <!-- barra de busqueda Inicio -->
             <div class="input-group p-5">
-      
-                <select class=" btn-outline-secondary selector" id="inputGroupSelect">
-                  <option selected value="1">Asignatura</option>
-                  <option value="2">Profesor</option>
-                </select>
-          
                 <input type="text" class="form-control" id="busqueda" onkeyup="buscar()" placeholder="Buscar materia">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2" >Buscar</button>
               </div>

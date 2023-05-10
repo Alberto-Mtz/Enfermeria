@@ -1,4 +1,4 @@
-var API_URL = 'http://3.138.60.6:8000/';
+var API_URL = 'http://localhost:8000/';
         
 let miCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith("token=")).split('=')[1];
 console.log(miCookie);

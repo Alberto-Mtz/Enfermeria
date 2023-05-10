@@ -11,7 +11,6 @@
         if(!document.cookie){
             window.location.replace("login.php");
         }
-        
     </script>
 
 </head>
@@ -64,59 +63,59 @@
             </thead>
             <tr class="celdaHorario">
                     <td name="hora"></td>
-                    <td><button class="btn clases" name="lunes" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="martes" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="miercoles" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="jueves" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="viernes" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="1" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="2" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="3" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="4" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="5" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
             </tr>
             <tr class="celdaHorario">
                     <td name="hora"></td>
-                    <td><button class="btn clases" name="lunes" value="1" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="martes" value="1" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="miercoles" value="1" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="jueves" value="1" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="viernes" value="1" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="1" value="1" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="2" value="1" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="3" value="1" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="4" value="1" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="5" value="1" onclick="mostrar(name, value)">Seleccionar</button></td>
             </tr>
             <tr class="celdaHorario">
                     <td name="hora"></td>
-                    <td><button class="btn clases" name="lunes" value="2" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="martes" value="2" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="miercoles" value="2" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="jueves" value="2" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="viernes" value="2" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="1" value="2" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="2" value="2" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="3" value="2" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="4" value="2" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="5" value="2" onclick="mostrar(name, value)">Seleccionar</button></td>
             </tr>
             <tr class="celdaHorario">
                     <td name="hora"></td>
-                    <td><button class="btn clases" name="lunes" value="3" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="martes" value="3" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="miercoles" value="3" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="jueves" value="3" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="viernes" value="3" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="1" value="3" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="2" value="3" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="3" value="3" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="4" value="3" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="5" value="3" onclick="mostrar(name, value)">Seleccionar</button></td>
             </tr>
             <tr class="celdaHorario">
                     <td name="hora"></td>
-                    <td><button class="btn clases" name="lunes" value="4" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="martes" value="4" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="miercoles" value="4" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="jueves" value="4" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="viernes" value="4" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="1" value="4" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="2" value="4" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="3" value="4" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="4" value="4" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="5" value="4" onclick="mostrar(name, value)">Seleccionar</button></td>
             </tr>
             <tr class="celdaHorario">
                     <td name="hora"></td>
-                    <td><button class="btn clases" name="lunes" value="5" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="martes" value="5" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="miercoles" value="5" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="jueves" value="5" onclick="mostrar(name, value)">Seleccionar</button></td>
-                    <td><button class="btn clases" name="viernes" value="5" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="1" value="5" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="2" value="5" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="3" value="5" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="4" value="5" onclick="mostrar(name, value)">Seleccionar</button></td>
+                    <td><button class="btn clases" name="5" value="5" onclick="mostrar(name, value)">Seleccionar</button></td>
             </tr>
             <tr class="celdaHorario">
                 <td name="hora"></td>
-                <td><button class="btn clases" name="lunes" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
-                <td><button class="btn clases" name="martes" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
-                <td><button class="btn clases" name="miercoles" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
-                <td><button class="btn clases" name="jueves" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
-                <td><button class="btn clases" name="viernes" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
+                <td><button class="btn clases" name="1" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
+                <td><button class="btn clases" name="2" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
+                <td><button class="btn clases" name="3" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
+                <td><button class="btn clases" name="4" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
+                <td><button class="btn clases" name="5" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
         </tr>
         </table>
     </div>
@@ -126,6 +125,10 @@
             <div>
                 <label for="">Clase:</label>
                 <select class="form-select" id="materias"></select>
+            </div>
+            <div>
+                <label for="">Profesor:</label>
+                <select class="form-select" id="profesores"></select>
             </div>
             <div class="content-buttons"><a href="#" id="close-button" onclick="ShowMateria()">Aceptar</a></div>
         </div>

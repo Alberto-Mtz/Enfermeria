@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.php">Home</a>
+                        <a class="nav-link" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tablaestudiante.php">Estudiantes</a>
@@ -43,7 +43,7 @@
                     <a href="tablaestudiante.php" class="link">
                         <div class="card-body">
                             <h5 class="card-title text-center">Estudiantes</h5>
-                            <img src="/images/grupos.png" class="opcion" alt="">
+                            <img src="../images/grupos.png" class="opcion" alt="">
                         </div>
                     </a>
                     
@@ -54,7 +54,7 @@
                     <a class="link" href="tablajefe.php">
                         <div class="card-body">
                             <h5 class="card-title text-center">Jefes de grupo</h5>
-                            <img src="/images/grupos.png" class="opcion" alt="">
+                            <img src="../images/grupos.png" class="opcion" alt="">
                         </div>
                     </a>
                 </div>
@@ -64,7 +64,7 @@
                     <a href="tabladmin.php" class="link">
                         <div class="card-body">
                             <h5 class="card-title text-center">Administradores</h5>
-                            <img src="/images/grupos.png" class="opcion" alt="">
+                            <img src="../images/grupos.png" class="opcion" alt="">
                         </div>
                     </a>
                 </div>

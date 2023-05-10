@@ -1,7 +1,151 @@
-
 document.getElementById('window-select').style.display = "none";
 
-var API_URL = 'http://3.138.60.6:8000/';
+var API_URL = 'http://localhost:8000/';
+let miCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith("token=")).split('=')[1];
+console.log(miCookie);
+
+let subjects = new Array();
+let materias2 = new Array();
+let profesores = new Array();
+var seleccion;
+var value;
+var materia;
+
+var select = document.getElementById("materias");
+
+function mostrar(name,value){
+    var selectButton = document.getElementsByName(name); // Celdas del mismo nombre (1, 2, 3, 4, 5) correspondiente a un dia diferente
+
+    fetch(API_URL + '/subjects', {
+        headers: {
+            "Authorization": miCookie
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        let cont = 0;
+        for(let i = 0; i < data.data.length; i++){
+            if(data.data[i].is_active == 1){
+                if(data.data[i].day_id == name){
+                    subjects[cont] = data.data[i].data;
+                    cont++;
+                }
+            }
+        }
+
+        //select.addEventListener("change", function() {mostrarProfesores()});
+        llenarSelect();
+        document.getElementById('window-select').style.display = "block"; // Mostrar pagina de seleccion
+        seleccion = selectButton[value]; // Posicion de la lista del dia que se selecciono
+    })
+    .catch(error => {
+        console.error(error);
+    });
+}
+
+function llenarSelect(){
+    console.log('Acceso a funcion llenar select');
+    //Tu array de materias
+    //var select = document.getElementById("materias"); //Seleccionamos el select
+    
+    var cantidad = subjects.length;
+    materias2 = subjects;
+    //select.addEventListener('change', function() {mostrarProfesores()});
+    
+        if(subjects.length<cantidad){
+            for(var i=0; i < subjects.length; i++){
+                if(materia == subjects[i]){
+                    subjects.splice(i,1);
+                }
+            }
+        
+            for(var i=select.length; i>=0; i--){
+                select.remove(i);
+            }
+        
+            for(var i=0; i < subjects.length; i++){
+                var option = document.createElement("option"); //Creamos la opcion
+                option.innerHTML = subjects[i]; //Metemos el texto en la opción
+                select.appendChild(option); //Metemos la opción en el select
+            }
+        }else{
+            for(var i=0; i < materias2.length; i++){
+                if(materia == materias2[i]){
+                    materias2.splice(i,1);
+                }
+            }
+        
+            for(var i=select.length; i>=0; i--){
+                select.remove(i);
+            }
+        
+            for(var i=0; i < materias2.length; i++){ 
+                var option = document.createElement("option"); //Creamos la opcion
+                option.innerHTML = materias2[i]; //Metemos el texto en la opción
+                select.appendChild(option); //Metemos la opción en el select
+            }
+        }
+
+    
+    console.log(cantidad);
+    
+    console.log(subjects);
+}
+
+function ShowMateria(){
+    console.log('SHOW MATERIA')
+    var materias = document.getElementById('materias');
+    materia = materias.options[materias.selectedIndex].text;
+    console.log(materia);
+    seleccion.innerHTML = materia;
+}
+
+var close_button = document.getElementById('close-button');
+
+close_button.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("window-select").style.display = "none";
+});
+
+function mostrarProfesores(){
+    var selectProfesor = document.getElementById("profesores");
+
+    fetch(API_URL + '/professors', {
+        headers: {
+            "Authorization": miCookie
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        let cont = 0;
+        for(let i = 0; i < data.data.length; i++){
+            if(data.data[i].is_active == 1){
+                profesores[cont] = data.data[i].name;
+                cont++;
+            }
+        }
+
+       
+    })
+    .catch(error => {
+        console.error(error);
+    });
+
+    console.log(profesores);
+
+    for(var i=0; i < profesores.length; i++){
+        var opcion = document.createElement('option'); //Creamos la opcion
+        opcion.innerHTML = profesores[i]; //Metemos el texto en la opción
+        selectProfesor.appendChild(opcion); //Metemos la opción en el select
+    }
+}
+
+
+
+// A N T I G U O
+/*
+
+var API_URL = 'http://192.168.208.1:8000/';
 let miCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith("token=")).split('=')[1];
 console.log(miCookie);
 
@@ -29,25 +173,9 @@ fetch(API_URL + '/subjects', {
     console.error(error);
 });
 
-
-
 var seleccion;
 var value;
 var materia;
-
-/*
-var materias = [
-    "Enfermeria del adulto", 
-    "El cuidado de enfermeria del adulto", 
-    "Salud en etapa productiva", 
-    "Relacion de ayuda I", 
-    "Ingles V",
-    "Optativa III: Adulto joven critico",
-    "Optativa III: Terapias energeticas del biocampo"
-];
-*/
-
-var dia;
 
 function mostrar(name, value){
     var selectButton = document.getElementsByName(name);
@@ -104,7 +232,7 @@ function llenarSelect(name){
                 select.remove(i);
             }
         
-            for(var i=0; i < subjects.length; i++){ 
+            for(var i=0; i < subjects.length; i++){
                 var option = document.createElement("option"); //Creamos la opcion
                 option.innerHTML = subjects[i]; //Metemos el texto en la opción
                 select.appendChild(option); //Metemos la opción en el select
@@ -142,5 +270,5 @@ function llenarSelect(name){
     
     console.log(subjects);
 }
-
+*/
 

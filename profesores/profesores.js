@@ -9,16 +9,9 @@ const options = {
     }
 };
 
-//                          M O S T R A R   A L U M N O S
+function mostrarProfesores(){
 
-function mostrarAlumnos(){
-    var user = document.getElementById('user');
-    var nombres = document.getElementById('nombre');
-    var semestre = document.getElementById('sems');
-    var grupo = document.getElementById('grupo');
-    //var miColeccion = new Array();
-
-    fetch(API_URL + '/users', {
+    fetch(API_URL + '/professors', {
         headers: {
             "Authorization": miCookie
         }
@@ -39,13 +32,13 @@ function mostrarAlumnos(){
                 }
                 */
         for (let i = 0; i < data.data.length; i++) {
-            if(data.data[i].type_id == 2 || data.data[i].type_id == 3){
+            //if(data.data[i].is_active == 2 || data.data[i].type_id == 3){
                 tabla.innerHTML += 
                     "<tr>"+
-                        "<td>"+data.data[i].user+"</td>"+
+                        "<td>"+data.data[i].account+"</td>"+
                         "<td>"+data.data[i].name+"</td>"+
-                        "<td>"+data.data[i].semester+"</td>"+
-                        "<td>"+data.data[i].group+"</td>"+
+                        "<td>"+data.data[i].email+"</td>"+
+                        "<td>"+data.data[i].is_active+"</td>"+
                         "<td>"+
                             "<a href='editarAlumno.php' class='btn btn-success'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-square' viewBox='0 0 16 16'>"+
                                 "<path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/>"+
@@ -59,7 +52,7 @@ function mostrarAlumnos(){
                             "</a>"+
                         "</td>"+
                     "</tr>";
-            }                            
+            //}                            
         }
     })
     .catch(error => {

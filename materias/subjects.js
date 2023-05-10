@@ -1,7 +1,7 @@
 document.getElementById('window-select').style.display = "none";
 var IDsubj;
 
-var API_URL = 'http://3.138.60.6:8000/';
+var API_URL = 'http://localhost:8000/';
 
 let miCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith("token=")).split('=')[1];
 console.log(miCookie);
@@ -25,7 +25,7 @@ function mostrarMaterias(){
                     "<tr>"+
                         "<td id='IDsubj'>"+data.data[i].id+"</td>"+
                         "<td>"+data.data[i].data+"</td>"+
-                        "<td>"+ +"</td>"+
+                        "<td>"+data.data[i].professor_id +"</td>"+
                         "<td>"+data.data[i].is_active+"</td>"+
                         "<td>"+
                             "<button href='editarMateria.php' class='btn btn-success' onclick='editar("+data.data[i].id+")'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-square' viewBox='0 0 16 16'>"+
@@ -49,7 +49,7 @@ function mostrarMaterias(){
                             "<tr>"+
                                 "<td id='IDsubj'>"+data.data[i].id+"</td>"+
                                 "<td>"+data.data[i].data+"</td>"+
-                                "<td>"+ +"</td>"+
+                                "<td>"+data.data[i].professor_id+"</td>"+
                                 "<td>"+data.data[i].is_active+"</td>"+
                                 "<td>"+
                                     "<button href='editarMateria.php' class='btn btn-success' onclick='editar("+data.data[i].id+")'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-square' viewBox='0 0 16 16'>"+

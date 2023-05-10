@@ -82,6 +82,26 @@
             </select>
         </div>
 
+        <div class="mb-3">
+            <label>Dias que se imparte:</label>
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                <label class="btn btn-outline-success" for="btncheck1">Lunes</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                <label class="btn btn-outline-success" for="btncheck2">Martes</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                <label class="btn btn-outline-success" for="btncheck3">Miercoles</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                <label class="btn btn-outline-success" for="btncheck4">Jueves</label>
+
+                <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+                <label class="btn btn-outline-success" for="btncheck5">Viernes</label>
+            </div>
+        </div>
+
 
         <div class="d-grid gap-2 col-6 mx-auto">
             <button class="btn boton" type="button">Guardar</button>

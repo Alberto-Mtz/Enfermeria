@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="../style/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../style/style.css" type="text/css">
     <title>PROFESORES</title>
+    <script>
+        if(!document.cookie){
+            window.location.replace("../login.php");
+        }
+    </script>
+
 </head>
-    <body>
+    <body onload="mostrarProfesores()">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #669934;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -58,10 +64,7 @@
                 </ul>
             </div>
 
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar un profesor" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
+            <input type="text" class="form-control" id="busqueda" onkeyup="buscar()" placeholder="Buscar profesor">
 
             <table class="table table-striped table-hover mt-5">
                 <thead>
@@ -75,63 +78,15 @@
                         Correo
                     </td>
                     <td>
+                        Grupo
+                    </td>
+                    <td>
                         Editar - Eliminar
                     </td>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            20004521
-                        </td>
-                        <td>
-                            Roman Andrés Sola Hernández
-                        </td>
-                        <td>
-                            rsola122@ucol.mx
-                        </td>
-                        <td>
-                            <div class="d-grid gap-2 d-md-block">
-                                <a href="editarProfesor.php" class="btn boton">Editar</a>
-                                <button class="btn btn-danger" type="button">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            20004521
-                        </td>
-                        <td>
-                            Roman Andrés Sola Hernández
-                        </td>
-                        <td>
-                            rsola122@ucol.mx
-                        </td>
-                        <td>
-                            <div class="d-grid gap-2 d-md-block">
-                                <a href="editarProfesor.php" class="btn boton">Editar</a>
-                                <button class="btn btn-danger" type="button">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            20004521
-                        </td>
-                        <td>
-                            Roman Andrés Sola Hernández
-                        </td>
-                        <td>
-                            rsola122@ucol.mx
-                        </td>
-                        <td>
-                            <div class="d-grid gap-2 d-md-block">
-                                <a href="editarProfesor.php" class="btn boton">Editar</a>
-                                <button class="btn btn-danger" type="button">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
+                <tbody id="tabla"></tbody>
             </table>
         </div>
+        <script src="profesores.js"></script>
     </body>
 </html>

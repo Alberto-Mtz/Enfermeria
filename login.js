@@ -1,4 +1,4 @@
-const API_URL = 'http://3.138.60.6:8000/users/sign_in';
+const API_URL = 'http://localhost:8000/users/sign_in';
 
 async function login(){
     var user = document.getElementById("user").value;
@@ -20,3 +20,4 @@ async function login(){
         window.location.replace("index.php");
     }
 }
+
