@@ -1,4 +1,4 @@
-document.getElementById('window-select').style.display = "none";
+//document.getElementById('window-select').style.display = "none";
 
 var API_URL = 'http://localhost:8000/';
 let miCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith("token=")).split('=')[1];
@@ -13,6 +13,37 @@ var materia;
 
 var select = document.getElementById("materias");
 
+function mostrar(dia){
+    //var selectButton = document.getElementsByName(name); // Celdas del mismo nombre (1, 2, 3, 4, 5) correspondiente a un dia diferente
+
+    fetch(API_URL + '/subjects', {
+        headers: {
+            "Authorization": miCookie
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        let cont = 0;
+        for(let i = 0; i < data.data.length; i++){
+            if(data.data[i].is_active == 1){
+                if(data.data[i].day_id == dia){
+                    subjects[cont] = data.data[i].data;
+                    cont++;
+                }
+            }
+        }
+
+        //select.addEventListener("change", function() {mostrarProfesores()});
+        llenarSelect();
+        //document.getElementById('window-select').style.display = "block"; // Mostrar pagina de seleccion
+        //seleccion = selectButton[value]; // Posicion de la lista del dia que se selecciono
+    })
+    .catch(error => {
+        console.error(error);
+    });
+}
+
+/*
 function mostrar(name,value){
     var selectButton = document.getElementsByName(name); // Celdas del mismo nombre (1, 2, 3, 4, 5) correspondiente a un dia diferente
 
@@ -41,7 +72,7 @@ function mostrar(name,value){
     .catch(error => {
         console.error(error);
     });
-}
+}*/
 
 function llenarSelect(){
     console.log('Acceso a funcion llenar select');
@@ -50,7 +81,7 @@ function llenarSelect(){
     
     var cantidad = subjects.length;
     materias2 = subjects;
-    //select.addEventListener('change', function() {mostrarProfesores()});
+    select.addEventListener('change', function() {mostrarProfesores()});
     
         if(subjects.length<cantidad){
             for(var i=0; i < subjects.length; i++){

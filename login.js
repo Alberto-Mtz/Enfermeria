@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8000/users/sign_in';
+var API_URL = 'http://localhost:8000/users/sign_in';
 
 async function login(){
     var user = document.getElementById("user").value;
@@ -12,7 +12,7 @@ async function login(){
             'Content-Type':'application/json'
         }
     }).then(res=>res.json())
-    .catch(error=>console.error('Error: ', error))
+    .catch(error=>console.error(error))
     .then(response=> response["token"]);
 
     if (x){

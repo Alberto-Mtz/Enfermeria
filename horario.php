@@ -37,6 +37,39 @@
     </nav>
 
     <div class="container">
+
+        <div class="content">
+            <div class="mb-3 mt-4">
+                <label>Dia: </label>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" id="btnLunes" autocomplete="off" name="dia" value="1" onclick="mostrar(value)" >
+                    <label class="btn btn-outline-success" for="btnLunes">Lunes</label>
+
+                    <input type="radio" class="btn-check" id="btnMartes" autocomplete="off" name="dia" value="2" onclick="mostrar(value)">
+                    <label class="btn btn-outline-success" for="btnMartes" >Martes</label>
+
+                    <input type="radio" class="btn-check" id="btnMiercoles" autocomplete="off" name="dia" value="3" onclick="mostrar(value)">
+                    <label class="btn btn-outline-success" for="btnMiercoles" >Miercoles</label>
+
+                    <input type="radio" class="btn-check" id="btnJueves" autocomplete="off" name="dia" value="4" onclick="mostrar(value)">
+                    <label class="btn btn-outline-success" for="btnJueves">Jueves</label>
+
+                    <input type="radio" class="btn-check" id="btnViernes" autocomplete="off" name="dia" value="5" onclick="mostrar(value)">
+                    <label class="btn btn-outline-success" for="btnViernes">Viernes</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="">Clase:</label>
+                <select class="form-select" id="materias"></select>
+            </div>
+            <div>
+                <label for="">Profesor:</label>
+                <select class="form-select" id="profesores"></select>
+            </div>
+            <div class="content-buttons"><a href="#" id="close-button" onclick="ShowMateria()">Aceptar</a></div>
+        </div>
+
         <div class="row mt-5 border-dark">
             <div class="col-8">
                 <label>Elegir horario:</label>
@@ -61,7 +94,100 @@
                     <th scope="col">Viernes</th>
                 </tr>
             </thead>
-            <tr class="celdaHorario">
+            <tbody>
+                <tr>
+                    <td name="hora"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td name="hora"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td name="hora"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td name="hora"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td name="hora"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td name="hora"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td name="hora"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <!--<div class="window-select" id="window-select">
+        <div class="content">
+            <div>
+                <label for="">Clase:</label>
+                <select class="form-select" id="materias"></select>
+            </div>
+            <div>
+                <label for="">Profesor:</label>
+                <select class="form-select" id="profesores"></select>
+            </div>
+            <div class="content-buttons"><a href="#" id="close-button" onclick="ShowMateria()">Aceptar</a></div>
+        </div>
+    </div>
+</body>-->
+<script src="script.js"></script>
+
+<!--
+<select class="form-select" aria-label="Default select example" id="materias" name="materias">
+    <option value="1">Clase 1</option>
+    <option value="2">Clase 2</option>
+    <option value="3">Clase 3</option>
+    <option value="4">Clase 4</option>
+    <option value="5">Clase 5</option>
+    <option value="6">Clase 6</option>
+    <option value="7">Clase 7</option>
+    <option value="8">Clase 8</option>
+</select>
+-->
+
+
+<!-- 
+    <tr class="celdaHorario">
                     <td name="hora"></td>
                     <td><button class="btn clases" name="1" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
                     <td><button class="btn clases" name="2" value="0" onclick="mostrar(name,value)">Seleccionar</button></td>
@@ -117,34 +243,4 @@
                 <td><button class="btn clases" name="4" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
                 <td><button class="btn clases" name="5" value="6" onclick="mostrar(name, value)">Seleccionar</button></td>
         </tr>
-        </table>
-    </div>
-
-    <div class="window-select" id="window-select">
-        <div class="content">
-            <div>
-                <label for="">Clase:</label>
-                <select class="form-select" id="materias"></select>
-            </div>
-            <div>
-                <label for="">Profesor:</label>
-                <select class="form-select" id="profesores"></select>
-            </div>
-            <div class="content-buttons"><a href="#" id="close-button" onclick="ShowMateria()">Aceptar</a></div>
-        </div>
-    </div>
-</body>
-<script src="script.js"></script>
-
-<!--
-<select class="form-select" aria-label="Default select example" id="materias" name="materias">
-    <option value="1">Clase 1</option>
-    <option value="2">Clase 2</option>
-    <option value="3">Clase 3</option>
-    <option value="4">Clase 4</option>
-    <option value="5">Clase 5</option>
-    <option value="6">Clase 6</option>
-    <option value="7">Clase 7</option>
-    <option value="8">Clase 8</option>
-</select>
 -->
